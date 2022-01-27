@@ -1,5 +1,0 @@
-bmp_parser.c:11:9:get_uint8_le	24	static
-bmp_parser.c:19:10:get_uint16_le	24	static
-bmp_parser.c:27:10:get_uint32_le	24	static
-bmp_parser.c:35:10:bmp_parser	88	static
-bmp_parser.c:62:6:GUI_Disbitmap	32	static
