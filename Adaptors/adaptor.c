@@ -400,6 +400,7 @@ void init_lcd_display(){
 
    /* Layer2 Init */
    BSP_LCD_LayerDefaultInit(1, LCD_FRAME_BUFFER_LAYER1);
+   //BSP_LCD_LayerRgb565Init( 1, LCD_FRAME_BUFFER_LAYER1);
    /* Set Foreground Layer */
    BSP_LCD_SelectLayer(1);
    /* Clear the LCD */

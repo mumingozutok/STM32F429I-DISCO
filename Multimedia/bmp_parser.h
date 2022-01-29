@@ -44,6 +44,6 @@ typedef union U_BMP_File{
 } BMP_File_t;
 
 uint8_t* bmp_parser(uint8_t* p, uint16_t* Width, uint16_t* Height);
-void GUI_Disbitmap(uint16_t Xpoint, uint16_t Ypoint, uint16_t width, uint16_t height, uint16_t *bmp);
+void GUI_Disbitmap(uint16_t Xpoint, uint16_t Ypoint, uint16_t width, uint16_t height, uint32_t *bmp);
 
 #endif /* BMP_PARSER_H_ */

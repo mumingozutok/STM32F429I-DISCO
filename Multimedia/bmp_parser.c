@@ -6,6 +6,7 @@
  */
 
 #include "stdio.h"
+#include "stm32f429i_discovery.h"
 #include "bmp_parser.h"
 
 uint8_t get_uint8_le(uint8_t*p, uint16_t* index)
@@ -59,10 +60,10 @@ uint8_t* bmp_parser(uint8_t* p, uint16_t* Width, uint16_t* Height){ //input an a
 }
 
 //Todo: improve function with the DMA usage
-void GUI_Disbitmap(uint16_t Xpoint, uint16_t Ypoint, uint16_t width, uint16_t height, uint16_t *bmp)
+void GUI_Disbitmap(uint16_t Xpoint, uint16_t Ypoint, uint16_t width, uint16_t height, uint32_t *bmp)
 {
 	uint16_t i, j;
-	uint16_t color;
+	uint32_t color;
 	uint32_t red, green, blue;
 	/*uint16_t r5,g6,b5;
 	uint16_t Width, Height;
@@ -73,6 +74,7 @@ void GUI_Disbitmap(uint16_t Xpoint, uint16_t Ypoint, uint16_t width, uint16_t he
     for(j = 0; j < height; j++) {
         for(i = 0; i <width; i ++) {
         	color = bmp[i+j*width];
+        	//color = 0xFF00FF00;
 
         	/*red = (color << 8) &  0xF80000;
         	green = (color <<5) & 0x00FC00;
